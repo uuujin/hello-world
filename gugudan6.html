@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>반복문을 사용한 구구단 연습</h1>
+	출력할 단수 : <input type="text" id="num"> <br>
+	<BUTTON onclick="runGgd()">확인</BUTTON>
+	<p id="result"></p>
+	<script>
+		function runGgd() {
+			var strN = document.getElementById("num").value;
+			var n = parseInt(strN);
+			document.getElementById('result').innerHTML ="<h2>구구단 " + n + "단</h>";
+			for (var i = 1; i <= 9; i++){
+				document.getElementById('result').append(n + "*" + i + "=" + n * i + "\n");
+			}
+		}
+	</script>
+</body>
+</html>
